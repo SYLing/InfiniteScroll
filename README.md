@@ -23,3 +23,25 @@
                           ];
     [self.view addSubview:scrollView];
 ```
+
+## 头文件提供外界使用的方法
+
+```objc
+
+@protocol YLInfiniteScrollViewDelegate <NSObject>
+
+@optional
+- (void)scrollViewImageClick:(YLInfiniteScrollView *)scrollView;
+@end
+
+@interface YLInfiniteScrollView : UIView
+/** 添加轮播图片 */
+@property (strong, nonatomic) NSArray *images;
+/** 右下角的圆点提示 */
+@property (weak, nonatomic, readonly) UIPageControl *pageControl;
+/** 滚动方向 */
+@property (assign, nonatomic, getter=isScrollDirectionPortrait) BOOL scrollDirectionPortrait;
+/** 图片被点击 */
+@property (weak, nonatomic) id<YLInfiniteScrollViewDelegate> delegate;
+@end
+```
