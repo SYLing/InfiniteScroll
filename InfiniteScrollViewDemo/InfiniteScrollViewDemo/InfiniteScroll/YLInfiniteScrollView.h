@@ -2,7 +2,7 @@
 //  YLInfiniteScrollView.h
 //  滚动起来
 //
-//  Created by 邵银岭 Lee on 15/5/24.
+//  Created by 邵银岭 on 15/5/24.
 //  Copyright (c) 2015年 邵银岭. All rights reserved.
 //
 
