@@ -12,7 +12,7 @@
 @protocol YLInfiniteScrollViewDelegate <NSObject>
 
 @optional
-- (void)scrollViewImageClick:(YLInfiniteScrollView *)scrollView;
+- (void)scrollViewClick:(YLInfiniteScrollView *)scrollView WithIndexImage:(NSInteger)index;
 @end
 
 @interface YLInfiniteScrollView : UIView
