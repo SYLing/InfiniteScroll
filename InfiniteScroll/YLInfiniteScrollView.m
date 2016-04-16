@@ -51,6 +51,7 @@ static int const ImageViewCount = 3;
         
         // 监听图片点击
         imageView.userInteractionEnabled = YES;
+        imageView.tag = i;
         [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
     }
     
@@ -65,8 +66,8 @@ static int const ImageViewCount = 3;
  */
 - (void)imageClick:(UIImage *)image
 {
-    if ([self.delegate respondsToSelector:@selector(scrollViewImageClick:)]) {
-        [_delegate scrollViewImageClick:self];
+     if ([self.delegate respondsToSelector:@selector(scrollViewClick:WithIndexImage:)]) {
+        [_delegate scrollViewClick:self WithIndexImage:tapGestureRecognizer.view.tag];
     }
 }
 
